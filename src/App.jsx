@@ -17,12 +17,14 @@ function App() {
         <CartProvider>
           <Router>
             <Navbar />
-            <div className="container mt-4"></div>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/" element={<Shop />} />
-              <Route path="/Cart" element={<Checkout />} />{" "}
-            </Routes>
+            <main className="app-main">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/shop" element={<Shop />} />
+                <Route path="/checkout" element={<Checkout />} />
+              </Routes>
+              
+            </main>
           </Router>
         </CartProvider>
       </div>

@@ -1,7 +1,8 @@
 import React from "react";
 import Shop from "../Shop/Shop.jsx";
 import { products } from "../Shop/Shop.jsx";
-import './Homestyle.css';
+import "./Homestyle.css";
+import { useState } from "react";
 import Hero from "../Home/images/category1.jpg";
 import Hero2 from "../Home/images/category2.jpg";
 import Hero3 from "../Home/images/category3.jpg";
@@ -16,9 +17,10 @@ import product6 from "../Home/images/product6.jpg";
 import product7 from "../Home/images/product7.jpg";
 import product8 from "../Home/images/product8.jpg";
 
-
-
 function Home() {
+
+
+
   return (
     <div>
       <div className="hero-container" style={{ marginTop: "90px" }}>
@@ -129,91 +131,179 @@ function Home() {
             </ul>
           </div>
         </div>
-
-        <div className="container-fluid mt-2">
-          <div className="row justify-content-center">
-            <div className="col-lg-3 col-md-4 col-sm-6 g-3">
-              <div className="product-card">
-                <img src={product1} alt="" />
-                <p>Buttons tweed blazer</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <span className="fw-bold">$ 59.0</span>
-                
+      </div>
+      <div className="container-fluid">
+        <div className="row g-3 justify-content-center">
+          <div className="col-lg-3 col-md-4 col-sm-6">
+            <div className="product-card">
+              <img src={product1} alt="" className="image-wrapper" />
+              <p>Buttons tweed blazer</p>
+              <p>⭐⭐⭐⭐⭐</p>
+              <span className="fw-bold">$ 59.0</span>
+              {/* Hover Buttons */}
+              <div className="hover-actions">
+                <a className="icon-btn" href="#">
+                  👁
+                </a>
+                <a className="icon-btn" href="#">
+                  ❤️
+                </a>
+                <a className="icon-btn" href="#">
+                  🛒
+                </a>
               </div>
-              <div className="product-card">
-                <img src={product2} alt="" />
-                <p>Buttons tweed blazer</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <span className="fw-bold">$ 59.0</span>
-              </div>
-
-              <div className="product-card">
-                <img src={product3} alt="" />
-                <p>Buttons tweed blazer</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <span className="fw-bold">$ 59.0</span>
-              </div>
-              <div className="product-card">
-                <img src={product4} alt="" />
-                <p>Buttons tweed blazer</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <span className="fw-bold">$ 59.0</span>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6 g-3">
-              <div className="product-card">
-                <img src={product5} alt="" />
-                <p>Buttons tweed blazer</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <span className="fw-bold">$ 59.0</span>
-              </div>
-              <div className="product-card">
-                <img src={product6} alt="" />
-                <p>Buttons tweed blazer</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <span className="fw-bold">$ 59.0</span>
-              </div>
-
-              <div className="product-card">
-                <img src={product7} alt="" />
-                <p>Buttons tweed blazer</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <span className="fw-bold">$ 59.0</span>
-              </div>
-
-              <div className="product-card">
-                <img src={product8} alt="" />
-                <p>Buttons tweed blazer</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <span className="fw-bold">$ 59.0</span>
-                    {/* Hover Buttons */}
-            <div className="hover-actions">
-              <a className="icon-btn" href="#">
-                👁
-              </a>
-              <a className="icon-btn" href="#">
-                ❤️
-              </a>
-              <a className="icon-btn" href="#">
-                🛒
-              </a>
             </div>
           </div>
 
+          <div className="col-lg-3 col-md-4 col-sm-6">
+            <div className="product-card">
+              <img src={product2} alt="" className="image-wrapper" />
+              <p>Buttons tweed blazer</p>
+              <p>⭐⭐⭐⭐⭐</p>
+              <span className="fw-bold">$ 59.0</span>
+              {/* Hover Buttons */}
+              <div className="hover-actions">
+                <a className="icon-btn" href="#">
+                  👁
+                </a>
+                <a className="icon-btn" href="#">
+                  ❤️
+                </a>
+                <a className="icon-btn" href="#">
+                  🛒
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-3 col-md-4 col-sm-6">
+            <div className="product-card">
+              <img src={product3} alt="" className="image-wrapper" />
+              <p>Buttons tweed blazer</p>
+              <p>⭐⭐⭐⭐⭐</p>
+              <span className="fw-bold">$ 59.0</span>
+              {/* Hover Buttons */}
+              <div className="hover-actions">
+                <a className="icon-btn" href="#">
+                  👁
+                </a>
+                <a className="icon-btn" href="#">
+                  ❤️
+                </a>
+                <a className="icon-btn" href="#">
+                  🛒
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-3 col-md-4 col-sm-6">
+            <div className="product-card">
+              <img src={product4} alt="" className="image-wrapper" />
+              <p>Buttons tweed blazer</p>
+              <p>⭐⭐⭐⭐⭐</p>
+              <span className="fw-bold">$ 59.0</span>
+              {/* Hover Buttons */}
+              <div className="hover-actions">
+                <a className="icon-btn" href="#">
+                  👁
+                </a>
+                <a className="icon-btn" href="#">
+                  ❤️
+                </a>
+                <a className="icon-btn" href="#">
+                  🛒
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-3 col-md-4 col-sm-6">
+            <div className="product-card">
+              <img src={product5} alt=""  className="image-wrapper"/>
+              <p>Buttons tweed blazer</p>
+              <p>⭐⭐⭐⭐⭐</p>
+              <span className="fw-bold">$ 59.0</span>
+              {/* Hover Buttons */}
+              <div className="hover-actions">
+                <a className="icon-btn" href="#">
+                  👁
+                </a>
+                <a className="icon-btn" href="#">
+                  ❤️
+                </a>
+                <a className="icon-btn" href="#">
+                  🛒
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-3 col-md-4 col-sm-6">
+            <div className="product-card">
+              <img src={product6} alt=""  className="image-wrapper"/>
+              <p>Buttons tweed blazer</p>
+              <p>⭐⭐⭐⭐⭐</p>
+              <span className="fw-bold">$ 59.0</span>
+              {/* Hover Buttons */}
+              <div className="hover-actions">
+                <a className="icon-btn" href="#">
+                  👁
+                </a>
+                <a className="icon-btn" href="#">
+                  ❤️
+                </a>
+                <a className="icon-btn" href="#">
+                  🛒
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-3 col-md-4 col-sm-6">
+            <div className="product-card">
+              <img src={product7} alt="" className="image-wrapper" />
+              <p>Buttons tweed blazer</p>
+              <p>⭐⭐⭐⭐⭐</p>
+              <span className="fw-bold">$ 59.0</span>
+              {/* Hover Buttons */}
+              <div className="hover-actions">
+                <a className="icon-btn" href="#">
+                  👁
+                </a>
+                <a className="icon-btn" href="#">
+                  ❤️
+                </a>
+                <a className="icon-btn" href="#">
+                  🛒
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-3 col-md-4 col-sm-6">
+            <div className="product-card">
+              <img src={product8} alt=""  className="image-wrapper"/>
+              <p>Buttons tweed blazer</p>
+              <p>⭐⭐⭐⭐⭐</p>
+              <span className="fw-bold">$ 59.0</span>
+              {/* Hover Buttons */}
+              <div className="hover-actions">
+                <a className="icon-btn" href="#">
+                  👁
+                </a>
+                <a className="icon-btn" href="#">
+                  ❤️
+                </a>
+                <a className="icon-btn" href="#">
+                  🛒
+                </a>
               </div>
             </div>
           </div>
         </div>
-
-        
-
-        
       </div>
-
-
-
-
-    
+    </div>
   );
 }
 
