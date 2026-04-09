@@ -148,36 +148,37 @@
   transition-duration: 2.6s;
 } */
 .BannerSection {
-    position: relative;
-    width: 100%;
-    min-height: 400px; 
+  position: relative;
+  width: 100%;
+  min-height: 400px;
 }
 
 .imgBanner {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-
-.carousel-inner, .carousel-item {
-    height: 100%;
+.carousel-inner,
+.carousel-item {
+  height: 100%;
 }
 
 .BannerOverlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    text-align: center;
-    width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  width: 100%;
 }
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
   filter: invert(1) sepia(100%) saturate(500%) hue-rotate(180deg);
 }
-.headline{
-   font-size: 1.75rem;
+.headline {
+  font-size: 1.75rem;
   text-underline-offset: 8px;
   text-decoration: underline;
   text-decoration-color: #fc0404;
@@ -186,21 +187,101 @@
 }
 
 /* discount section */
-.discountContent{
-  margin-top: 150px;
+.colBG {
+  background: rgba(179, 179, 184, 0.497);
 }
-.circle{
-  background-color:#fff;
+.discountContent {
+  margin-top: 50px;
+}
+.circle {
+  background-color: #fff;
   position: relative;
   z-index: 1;
-  height:50px;
-  width:50px;
-  padding: 80px;
-  border-radius:50%;
-  border:5px solid #ffffff;
-  margin:auto;
-  color:#fff;
-  line-height:50px;
-  text-align:center
+  padding: 100px;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  opacity: 0.5;
+}
+.summer {
+  font-family: "Cookie", cursive;
+  font-size: 60px;
+}
+
+/* Gallery Insta*/
+
+/* .containerGallery:has(img:hover) > img:not(:hover){
+  opacity: 0.4;
+} */
+
+.containerGallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  position: relative; /* ضروري لتموضع الأيقونة فوق الصورة */
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* الشفافية الافتراضية 100% */
+  opacity: 1; 
+  transition: opacity 0.4s ease; /* تنعيم حركة التلاشي */
+}
+
+/* حالة التمرير (Hover) */
+.gallery-item:hover .gallery-img {
+  opacity: 0.4; /* تتحول الشفافية إلى 0.4 */
+}
+
+/* تنسيق طبقة الأيقونة */
+.gallery-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* مخفية افتراضياً */
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* لكي لا تعيق الضغط على الصورة */
+}
+
+.insta-icon {
+  font-size: 2.5rem;
+  color: #fff; /* لون الأيقونة أبيض */
+}
+
+/* إظهار الأيقونة عند التمرير */
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+
+/* footer section */
+/* footer About  */
+.footerPayment, .footerSocial {
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footerWidget ul li{
+  list-style: none;
+  cursor: pointer;
   
+}
+
+.footerNewsLetter form input{
+
+height: 52px;
+width: 100%;
+border: 1px solid #e1e1e1;
+border-radius: 50px;
+padding-left: 30px;
+font-size: 14px;
+color: #666666;
 }
