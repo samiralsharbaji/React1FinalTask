@@ -2,7 +2,7 @@ import React from "react";
 import Shop from "../Shop/Shop.jsx";
 import { products } from "../Shop/Shop.jsx";
 import "./Homestyle.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Hero from "../Home/images/category1.jpg";
 import Hero2 from "../Home/images/category2.jpg";
 import Hero3 from "../Home/images/category3.jpg";
@@ -16,10 +16,25 @@ import product5 from "../Home/images/product5.jpg";
 import product6 from "../Home/images/product6.jpg";
 import product7 from "../Home/images/product7.jpg";
 import product8 from "../Home/images/product8.jpg";
+import banner from "../Home/images/banner1.jpg";
+import discount from "../Home/images/discount.jpg";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function Home() {
+  const [hotTrends, setHotTrends] = useState([]);
+  const [features, setFeatures] = useState([]);
+  const [bestSellers, setBestSellers] = useState([]);
 
+  const getRandomProducts = (arr, count) => {
+    return [...arr].sort(() => 0.5 - Math.random()).slice(0, count);
+  };
 
+  useEffect(() => {
+    setHotTrends(getRandomProducts(products, 3));
+    setFeatures(getRandomProducts(products, 3));
+    setBestSellers(getRandomProducts(products, 3));
+  }, []);
 
   return (
     <div>
@@ -220,7 +235,7 @@ function Home() {
 
           <div className="col-lg-3 col-md-4 col-sm-6">
             <div className="product-card">
-              <img src={product5} alt=""  className="image-wrapper"/>
+              <img src={product5} alt="" className="image-wrapper" />
               <p>Buttons tweed blazer</p>
               <p>⭐⭐⭐⭐⭐</p>
               <span className="fw-bold">$ 59.0</span>
@@ -241,7 +256,7 @@ function Home() {
 
           <div className="col-lg-3 col-md-4 col-sm-6">
             <div className="product-card">
-              <img src={product6} alt=""  className="image-wrapper"/>
+              <img src={product6} alt="" className="image-wrapper" />
               <p>Buttons tweed blazer</p>
               <p>⭐⭐⭐⭐⭐</p>
               <span className="fw-bold">$ 59.0</span>
@@ -283,7 +298,7 @@ function Home() {
 
           <div className="col-lg-3 col-md-4 col-sm-6">
             <div className="product-card">
-              <img src={product8} alt=""  className="image-wrapper"/>
+              <img src={product8} alt="" className="image-wrapper" />
               <p>Buttons tweed blazer</p>
               <p>⭐⭐⭐⭐⭐</p>
               <span className="fw-bold">$ 59.0</span>
@@ -299,6 +314,201 @@ function Home() {
                   🛒
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* summer essential */}
+      <div className="BannerSection mt-5 position-relative">
+        {/* الصورة الخلفية */}
+        <img
+          src={banner}
+          alt="Banner"
+          className="imgBanner w-100"
+          style={{ height: "500px", objectFit: "cover" }}
+        />
+
+        {/* الكاروسيل فوق الصورة */}
+        <div
+          id="carouselExampleFade"
+          className="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-100"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner h-100">
+            {/* الشريحة الأولى */}
+            <div className="carousel-item active h-100" data-bs-interval="2500">
+              <div className="d-flex flex-column align-items-center justify-content-center h-100 text-center">
+                <p className="text-danger fw-bold text-uppercase">
+                  summer essential
+                </p>
+                <h2 className="text-dark display-4 fw-bold">
+                  Linen Breeze Dress
+                </h2>
+                <a
+                  href="#"
+                  className="fs-5 shop-now-link btn btn-outline-dark mt-3"
+                >
+                  SHOP NOW
+                </a>
+              </div>
+            </div>
+
+            {/* الشريحة الثانية */}
+            <div className="carousel-item h-100" data-bs-interval="2500">
+              <div className="d-flex flex-column align-items-center justify-content-center h-100 text-center">
+                <p className="text-danger fw-bold text-uppercase">
+                  The Chloe Collection
+                </p>
+                <h2 className="text-dark display-4 fw-bold">
+                  New Spring Arrival
+                </h2>
+                <a
+                  href="#"
+                  className="fs-5 shop-now-link btn btn-outline-dark mt-3"
+                >
+                  SHOP NOW
+                </a>
+              </div>
+            </div>
+
+            {/* الشريحة الثالثة */}
+            <div className="carousel-item h-100" data-bs-interval="2500">
+              <div className="d-flex flex-column align-items-center justify-content-center h-100 text-center">
+                <p className="text-danger fw-bold text-uppercase">
+                  Urban Street Style
+                </p>
+                <h2 className="text-dark display-4 fw-bold">
+                  Modern Chic Looks
+                </h2>
+                <a
+                  href="#"
+                  className="fs-5 shop-now-link btn btn-outline-dark mt-3"
+                >
+                  SHOP NOW
+                </a>
+              </div>
+            </div>
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleFade"
+              data-bs-slide="prev"
+            >
+              <span className="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleFade"
+              data-bs-slide="next"
+            >
+              <span className="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* hot trend , best seller , feature  section */}
+      <div className="container-fluid">
+        <div className="row justify-content-center">
+          {/*  Hot Trend */}
+          <div className="col-md-3">
+            <p className="mt-5 fs-3 headline">Hot Trend</p>
+            {hotTrends.map((product) => (
+              <div
+                key={product.id}
+                className="text-center mb-3 d-flex align-items-center"
+              >
+                <img
+                  className="img-fluid"
+                  style={{
+                    width: "150px",
+                    height: "150px",
+                    objectFit: "cover",
+                  }}
+                  src={product.image}
+                  alt={product.name}
+                />
+                <div className="ms-3">
+                  <h6>{product.name}</h6>
+                  <p>⭐ {product.rating}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/*  Feature */}
+          <div className="col-md-3">
+            <p className="mt-5 fs-3 headline">Feature</p>
+            {features.map((product) => (
+              <div
+                key={product.id}
+                className="text-center mb-3 d-flex align-items-center"
+              >
+                <img
+                  className="img-fluid"
+                  style={{
+                    width: "150px",
+                    height: "150px",
+                    objectFit: "cover",
+                  }}
+                  src={product.image}
+                  alt={product.name}
+                />
+                <div className="ms-3">
+                  <h6>{product.name}</h6>
+                  <p>⭐ {product.rating}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/*  Best Seller */}
+          <div className="col-md-3">
+            <p className=" mt-5 fs-3 headline">Best Seller</p>
+            {bestSellers.map((product) => (
+              <div
+                key={product.id}
+                className="text-center mb-3 d-flex align-items-center"
+              >
+                <img
+                  className="img-fluid"
+                  style={{
+                    width: "150px",
+                    height: "150px",
+                    objectFit: "cover",
+                  }}
+                  src={product.image}
+                  alt={product.name}
+                />
+                <div className="ms-3">
+                  <h6>{product.name}</h6>
+                  <p>⭐ {product.rating}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* coupon section */}
+
+      <div className="container discountSection">
+        <div className="row">
+          <div className="col-md-6">
+            <div className="d-flex">
+              <div>
+              <img src={discount} alt="" />
+            </div>
+            <div className="col-md-6 bg-light w-100">
+              <div className="text-center discountContent">
+                <p>DISCOUNT</p>
+                <h2>Summer 2030</h2><span className="circle"></span>
+                <span>SALE</span>
+                <span className="text-danger">  50%</span>
+              </div>
+            </div>
             </div>
           </div>
         </div>

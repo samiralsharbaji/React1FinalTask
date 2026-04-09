@@ -51,7 +51,7 @@
   margin-bottom: 50px;
   list-style: none;
 }
- .filterControl li {
+.filterControl li {
   font-size: 14px;
   list-style: none;
   display: flex;
@@ -124,4 +124,83 @@
   cursor: pointer;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* summer essential banner */
+.BannerSection {
+  margin-top: 50px;
+}
+
+/* .BannerOverlay {
+  position: relative;
+  position: absolute;
+  transform: translate(50%, -200%);
+  text-align: left;
+  z-index: 2;
+  flex-flow: row;
+} */
+/* .BannerOverlay p {
+  text-align: center;
+} */
+
+/* carousel */
+/* .carousel-fade .carousel-item {
+  transition-duration: 2.6s;
+} */
+.BannerSection {
+    position: relative;
+    width: 100%;
+    min-height: 400px; 
+}
+
+.imgBanner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.carousel-inner, .carousel-item {
+    height: 100%;
+}
+
+.BannerOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  filter: invert(1) sepia(100%) saturate(500%) hue-rotate(180deg);
+}
+.headline{
+   font-size: 1.75rem;
+  text-underline-offset: 8px;
+  text-decoration: underline;
+  text-decoration-color: #fc0404;
+  color: #000000;
+  border: none;
+}
+
+/* discount section */
+.discountContent{
+  margin-top: 150px;
+}
+.circle{
+  background-color:#fff;
+  position: relative;
+  z-index: 1;
+  height:50px;
+  width:50px;
+  padding: 80px;
+  border-radius:50%;
+  border:5px solid #ffffff;
+  margin:auto;
+  color:#fff;
+  line-height:50px;
+  text-align:center
+  
 }
