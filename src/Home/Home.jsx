@@ -3,7 +3,7 @@ import Shop from "../Shop/Shop.jsx";
 import { products } from "../Shop/Shop.jsx";
 import "./Homestyle.css";
 import { useState, useEffect } from "react";
-import Logo from "../assets/images/Logo.png";
+
 import Hero from "../Home/images/category1.jpg";
 import Hero2 from "../Home/images/category2.jpg";
 import Hero3 from "../Home/images/category3.jpg";
@@ -21,30 +21,15 @@ import banner from "../Home/images/banner1.jpg";
 import discount from "../Home/images/discount.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import {
-  FaCcAmazonPay,
-  FaCcMastercard,
-  FaGooglePay,
-  FaCcPaypal,
-  FaCcApplePay,
-  FaCcStripe,
-  FaInstagram,
-  FaFacebook,
-  FaTwitter,
-  FaYoutube,
-  FaPinterest,
-} from "react-icons/fa";
+
 import {
   FireTruckSharp,
   Headphones,
   HeadsetMic,
+  Instagram,
   Money,
 } from "@mui/icons-material";
-import insta1 from "../Home/images/insta1.jpg";
-import insta2 from "../Home/images/insta2.jpg";
-import insta3 from "../Home/images/insta3.jpg";
-import insta4 from "../Home/images/insta4.jpg";
-import insta5 from "../Home/images/insta5.jpg";
+
 
 function Home() {
   const [hotTrends, setHotTrends] = useState([]);
@@ -584,166 +569,9 @@ function Home() {
         </div>
       </div>
 
-      {/* Gallery Instagram section */}
-      <div className="containerGallery mt-5">
-        <div className="gallery-item">
-          <img src={insta1} alt="Instagram 1" className="gallery-img" />
-          <div className="gallery-overlay">
-            <FaInstagram className="insta-icon"  style={{ color: '#E1306C' }} />
-          </div>
-        </div>
-
-        <div className="gallery-item">
-          <img src={insta2} alt="Instagram 2" className="gallery-img"  style={{ color: '#E1306C' }} />
-          <div className="gallery-overlay">
-            <FaInstagram className="insta-icon"  style={{ color: '#E1306C' }} />
-          </div>
-        </div>
-        <div className="gallery-item">
-          <img src={insta3} alt="Instagram 3" className="gallery-img" style={{ color: '#E1306C' }}  />
-          <div className="gallery-overlay">
-            <FaInstagram className="insta-icon"  style={{ color: '#E1306C' }} />
-          </div>
-        </div>
-
-        <div className="gallery-item">
-          <img src={insta4} alt="Instagram 4" className="gallery-img" />
-          <div className="gallery-overlay">
-            <FaInstagram className="insta-icon"  style={{ color: '#E1306C' }} />
-          </div>
-        </div>
-        <div className="gallery-item">
-          <img src={insta5} alt="Instagram 5" className="gallery-img" />
-          <div className="gallery-overlay">
-            <FaInstagram className="insta-icon" style={{ color: '#E1306C' }}  />
-          </div>
-        </div>
-      </div>
-      <footer className="mt-5">
-        <div className="container mt-5">
-          <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm 7">
-              <div className="footerAbout">
-                <div className="footerLogo">
-                  <img src={Logo} alt="" />
-                </div>
-                <p className="FooterAboutText">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt
-                </p>
-                <div className="footerPayment">
-                  <FaCcAmazonPay />
-                  <FaCcMastercard />
-                  <FaGooglePay />
-                  <FaCcPaypal />
-                  <FaCcApplePay />
-                  <FaCcStripe />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-2 col-md-3 col-sm-5">
-              <div className="footerWidget">
-                <h6>Quick Links</h6>
-                <ul>
-                  <li>
-                    About
-                    <a href="#"></a>
-                  </li>
-                  <li>
-                    Blogs
-                    <a href="#"></a>
-                  </li>
-                  <li>
-                    Contact
-                    <a href="#"></a>
-                  </li>
-                  <li>
-                    FAQ
-                    <a href="#"></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-lg-2 col-md-3 col-sm-4">
-              <div className="footerWidget">
-                <h6>Account</h6>
-                <ul>
-                  <li>
-                    my Account <a href="#"></a>
-                  </li>
-                  <li>
-                    Orders Trucking
-                    <a href="#"></a>
-                  </li>
-                  <li>
-                    Checkout
-                    <a href="#"></a>
-                  </li>
-                  <li>
-                    WishList
-                    <a href="#"></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-8 col-sm-8">
-              <div className="footerNewsLetter">
-                <h6>NewsLetter</h6>
-                <form action="">
-                  <label
-                    htmlFor="newsletter-email"
-                    className="visually-hidden"
-                    novalidate
-                  >
-                    email address
-                  </label>
-                  <div className="input-group">
-                    <input
-                      className="form-control"
-                      type="email"
-                      name="email"
-                      placeholder="Enter your Email"
-                      required
-                      aria-required="true"
-                      autoComplete="email"
-                    />
-                    <button className="btn btn-primary form-control">
-                      Subscribe
-                    </button>
-                  </div>
-                </form>
-              </div>
-
-              <div className="footerSocial">
-                <a href="#" role="listitem" aria-label="Facebook">
-                  <FaFacebook />
-                </a>
-                <a href="#" role="listitem" aria-label="X (Twitter)">
-                  <FaTwitter />
-                </a>
-                <a href="#" role="listitem" aria-label="YouTube">
-                  <FaInstagram />
-                </a>
-                <a href="#" role="listitem" aria-label="Instagram">
-                  <FaYoutube />
-                </a>
-                <a href="#" role="listitem" aria-label="Pintrest">
-                  <FaPinterest />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <hr />
-        <br />
-        <p className="text-center lead">
-          Copyright &copy; 2026 All rights reserved | This template is made with
-          by Eng. Samir
-        </p>
-      </footer>
+      
+      
+      
     </div>
   );
 }

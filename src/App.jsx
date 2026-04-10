@@ -9,7 +9,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Shop from "./Shop/Shop.jsx";
 import Checkout from "./Pages/Checkout.jsx";
 import Home from "./Home/Home.jsx";
-
+import Instagram from "./components/Instagram.jsx";
+import Footer from "./components/Footer.jsx";
 function App() {
   return (
     <>
@@ -23,7 +24,8 @@ function App() {
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/checkout" element={<Checkout />} />
               </Routes>
-              
+              <Instagram />
+              <Footer/>
             </main>
           </Router>
         </CartProvider>
