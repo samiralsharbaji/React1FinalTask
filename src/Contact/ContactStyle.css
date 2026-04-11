@@ -1,0 +1,18 @@
+
+p{
+    line-height: 15px;
+}
+.btn {
+    font-size: 14px;
+    color: #ffffff;
+    background: #ca1515;
+    font-weight: 600;
+    border: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+}
+ul li{
+     list-style-type: none;
+}

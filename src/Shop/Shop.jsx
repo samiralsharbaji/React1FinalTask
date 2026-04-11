@@ -10,6 +10,7 @@ import shop7 from "../assets/images/shop7.jpg";
 import shop8 from "../assets/images/shop8.jpg";
 import shop9 from "../assets/images/shop9.jpg";
 
+import "./sidebarStyle.css";
 import ProductList from "../components/ProductList";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -107,9 +108,291 @@ const products = [
 
 function Shop() {
   return (
-    <div className="container" style={{ marginTop: "100px" }}>
-      <h1>Shop</h1>
-      <ProductList products={products} />
+    <div classNameName="shop container" style={{ marginTop: "100px" }}>
+      <div classNameName="row">
+        <div className="col-lg-3 col-md-3">
+          <div className="shop__sidebar">
+            <div className="sidebar__categories">
+              <div className="section-title">
+                <h4>Categories</h4>
+              </div>
+              <div className="categories__accordion">
+                <div className="accordion" id="accordionExample">
+                  <div className="card">
+                    <div className="card-heading active">
+                      <a data-bs-toggle="collapse" href="#collapseOne">
+                        Clothing
+                      </a>
+                    </div>
+                    <div
+                      id="collapseOne"
+                      className="collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div className="card-body">
+                        <ul>
+                          <li>
+                            <a href="#">Coats</a>
+                          </li>
+                          <li>
+                            <a href="#">Jackets</a>
+                          </li>
+                          <li>
+                            <a href="#">Dresses</a>
+                          </li>
+                          <li>
+                            <a href="#">Shirts</a>
+                          </li>
+                          <li>
+                            <a href="#">T-shirts</a>
+                          </li>
+                          <li>
+                            <a href="#">Jeans</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card">
+                    <div className="card-heading">
+                      <a data-bs-toggle="collapse" href="#collapseTwo">
+                        Shoes
+                      </a>
+                    </div>
+                    <div
+                      id="collapseTwo"
+                      className="collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div className="card-body">
+                        <ul>
+                          <li>
+                            <a href="#">Heels</a>
+                          </li>
+                          <li>
+                            <a href="#">Boots</a>
+                          </li>
+                          <li>
+                            <a href="#">Sneakers</a>
+                          </li>
+                          <li>
+                            <a href="#">Sandals</a>
+                          </li>
+                          <li>
+                            <a href="#">Flats</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card">
+                    <div className="card-heading">
+                      <a data-bs-toggle="collapse" href="#collapseThree">
+                        Bags
+                      </a>
+                    </div>
+                    <div
+                      id="collapseThree"
+                      className="collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div className="card-body">
+                        <ul>
+                          <li>
+                            <a href="#">Handbags</a>
+                          </li>
+                          <li>
+                            <a href="#">Backpacks</a>
+                          </li>
+                          <li>
+                            <a href="#">Clutches</a>
+                          </li>
+                          <li>
+                            <a href="#">Totes</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card">
+                    <div className="card-heading">
+                      <a data-bs-toggle="collapse" href="#collapseFour">
+                        Accessories
+                      </a>
+                    </div>
+                    <div
+                      id="collapseFour"
+                      className="collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div className="card-body">
+                        <ul>
+                          <li>
+                            <a href="#">Jewelry</a>
+                          </li>
+                          <li>
+                            <a href="#">Watches</a>
+                          </li>
+                          <li>
+                            <a href="#">Sunglasses</a>
+                          </li>
+                          <li>
+                            <a href="#">Scarves</a>
+                          </li>
+                          <li>
+                            <a href="#">Belts</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="sidebar__filter">
+              <div className="section-title">
+                <h4>Shop by price</h4>
+              </div>
+              <div className="filter-range-wrap">
+                <div
+                  className="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                  data-min="33"
+                  data-max="99"
+                ></div>
+                <div className="range-slider">
+                  <div className="price-input">
+                    <p className="me-2">Price: </p>
+                    <input type="range" class="price-range__input price-range__input--min" min="33" max="99" value="33" />
+                  </div>
+                </div>
+                <a href="#">Filter</a>
+              </div>
+            </div>
+            <div className="sidebar__sizes">
+              <div className="section-title">
+                <h4>Shop by size</h4>
+              </div>
+              <div className="size__list">
+                <label for="xxs">
+                  xxs
+                  <input type="checkbox" id="xxs" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="xs">
+                  xs
+                  <input type="checkbox" id="xs" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="xss">
+                  xs-s
+                  <input type="checkbox" id="xss" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="s">
+                  s
+                  <input type="checkbox" id="s" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="m">
+                  m
+                  <input type="checkbox" id="m" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="ml">
+                  m-l
+                  <input type="checkbox" id="ml" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="l">
+                  l
+                  <input type="checkbox" id="l" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="xl">
+                  xl
+                  <input type="checkbox" id="xl" />
+                  <span className="checkmark"></span>
+                </label>
+              </div>
+            </div>
+            <div className="sidebar__color">
+              <div className="section-title">
+                <h4>Shop by color</h4>
+              </div>
+              <div className="size__list color__list">
+                <label for="black">
+                  Blacks
+                  <input type="checkbox" id="black" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="whites">
+                  Whites
+                  <input type="checkbox" id="whites" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="reds">
+                  Reds
+                  <input type="checkbox" id="reds" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="greys">
+                  Greys
+                  <input type="checkbox" id="greys" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="blues">
+                  Blues
+                  <input type="checkbox" id="blues" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="beige">
+                  Beige Tones
+                  <input type="checkbox" id="beige" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="greens">
+                  Greens
+                  <input type="checkbox" id="greens" />
+                  <span className="checkmark"></span>
+                </label>
+                <label for="yellows">
+                  Yellows
+                  <input type="checkbox" id="yellows" />
+                  <span className="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-9 col-md-9">
+          {/* Category Filter Bar */}
+          <div className="shop__product__option">
+            <div className="row">
+              <div className="col-lg-6 col-md-6 col-sm-6">
+                <div className="shop__product__option__left">
+                  <p>Showing 1-12 of 126 results</p>
+                </div>
+              </div>
+              <div className="col-lg-6 col-md-6 col-sm-6">
+                <div className="shop__product__option__right">
+                  <p>Sort by:</p>
+                  <select>
+                    <option value="">Default</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest First</option>
+                    <option value="rating">Best Rating</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            {/* products list  */}
+            <h1>Shop</h1>
+            <ProductList products={products} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
