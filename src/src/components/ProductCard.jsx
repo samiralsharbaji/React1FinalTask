@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
 import { Card, Button, Badge } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
-import StarRating from "../components/StarRating";
+import StarRating from "./StarRating";
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useContext(CartContext);

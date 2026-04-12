@@ -11,12 +11,8 @@ import Checkout from "./Pages/Checkout.jsx";
 import Home from "./Home/Home.jsx";
 import Instagram from "./components/Instagram.jsx";
 import Footer from "./components/Footer.jsx";
+import BreadCrumb from "./components/BreadCrumb.jsx";
 import Contact from './Contact/Contact.jsx'
-import Mens from "./Mens/Mens.jsx";
-import Womens from "./Womens/Womens.jsx";
-import { Pages } from "@mui/icons-material";
-import Blog from "./Blog/Blog.jsx";
-
 
 function App() {
   return (
@@ -25,16 +21,12 @@ function App() {
         <CartProvider>
           <Router>
             <Navbar />
-            
+            <BreadCrumb />
             <main className="app-main">
-              
+              <BreadCrumb />
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/Mens" element={<Mens />} />
-                <Route path="/Womens" element={<Womens />} />
                 <Route path="/shop" element={<Shop />} />
-                <Route path="/" element={<Pages/>} />
-                <Route path="/Blog" element={<Blog />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/Contact" element={<Contact />} />
               </Routes>

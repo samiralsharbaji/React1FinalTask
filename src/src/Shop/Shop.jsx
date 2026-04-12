@@ -110,7 +110,7 @@ function Shop() {
   return (
     <div className="shop container" style={{ marginTop: "100px" }}>
       <div className="row">
-        <div className="col-md-3">
+        <div className=" col-md-3">
           <div className="shop__sidebar">
             <div className="sidebar__categories">
               <div className="section-title">
@@ -253,20 +253,27 @@ function Shop() {
               <div className="section-title">
                 <h4>Shop by price</h4>
               </div>
-              <div className="filter-range-wrap__bottom">
-                <div className="range-slider">
-                  <div className="price-input">
-                    <p className="me-2">Price: </p>
-                    <input
-                      type="range"
-                      className="price-range_input price-range_input--min"
-                      min="33"
-                      max="99"
-                      defaultValue="33"
-                    />
+              <div className="filter-range-wrap">
+                <div
+                  className="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                  data-min="33"
+                  data-max="99"
+                ></div>
+                <div className="filter-range-wrap__bottom">
+                  <div className="range-slider">
+                    <div className="price-input">
+                      <p className="me-2">Price: </p>
+                      <input
+                        type="range"
+                        className="price-range__input price-range__input--min"
+                        min="33"
+                        max="99"
+                        defaultValue="33"
+                      />
+                    </div>
                   </div>
+                  <a href="#">Filter</a>
                 </div>
-                <a href="#">Filter</a>
               </div>
             </div>
             <div className="sidebar__sizes">
@@ -274,42 +281,42 @@ function Shop() {
                 <h4>Shop by size</h4>
               </div>
               <div className="size__list">
-                <label htmlFor="xxs">
+                <label for="xxs">
                   xxs
                   <input type="checkbox" id="xxs" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="xs">
+                <label for="xs">
                   xs
                   <input type="checkbox" id="xs" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="xss">
+                <label for="xss">
                   xs-s
                   <input type="checkbox" id="xss" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="s">
+                <label for="s">
                   s
                   <input type="checkbox" id="s" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="m">
+                <label for="m">
                   m
                   <input type="checkbox" id="m" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="ml">
+                <label for="ml">
                   m-l
                   <input type="checkbox" id="ml" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="l">
+                <label for="l">
                   l
                   <input type="checkbox" id="l" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="xl">
+                <label for="xl">
                   xl
                   <input type="checkbox" id="xl" />
                   <span className="checkmark"></span>
@@ -321,42 +328,42 @@ function Shop() {
                 <h4>Shop by color</h4>
               </div>
               <div className="size__list color__list">
-                <label htmlFor="black">
+                <label for="black">
                   Blacks
                   <input type="checkbox" id="black" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="whites">
+                <label for="whites">
                   Whites
                   <input type="checkbox" id="whites" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="reds">
+                <label for="reds">
                   Reds
                   <input type="checkbox" id="reds" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="greys">
+                <label for="greys">
                   Greys
                   <input type="checkbox" id="greys" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="blues">
+                <label for="blues">
                   Blues
                   <input type="checkbox" id="blues" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="beige">
+                <label for="beige">
                   Beige Tones
                   <input type="checkbox" id="beige" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="greens">
+                <label for="greens">
                   Greens
                   <input type="checkbox" id="greens" />
                   <span className="checkmark"></span>
                 </label>
-                <label htmlFor="yellows">
+                <label for="yellows">
                   Yellows
                   <input type="checkbox" id="yellows" />
                   <span className="checkmark"></span>
