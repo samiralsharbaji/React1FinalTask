@@ -3,9 +3,11 @@ import { CartContext } from "../Context/CartContext";
 import { Card, Button, Badge } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
 import StarRating from "../components/StarRating";
+import { useNavigate } from "react-router-dom"; // 👈 هذا المهم
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useContext(CartContext);
+  const navigate = useNavigate();
 
   return (
     <Card
@@ -16,7 +18,11 @@ const ProductCard = ({ product }) => {
         transition: "transform 0.3s ease, box-shadow 0.3s ease",
       }}
     >
-      <div className="position-relative">
+      <div
+        className="position-relative"
+        onClick={() => navigate(`/product/${product.id}`)}
+        style={{ cursor: "pointer" }}
+      >
         <Card.Img
           variant="top"
           src={product.image}

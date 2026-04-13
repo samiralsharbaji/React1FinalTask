@@ -1,11 +1,16 @@
 import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
 import { Card, Button } from "react-bootstrap";
-import CartItems from "../components/CartItems";
+
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import CartItems from "./CartItems";
+
 
 const Cart = () => {
   const { cart, totalPrice } = useContext(CartContext);
+  const navigate = useNavigate();
 
   if (cart.length === 0) {
     return (
@@ -30,7 +35,11 @@ const Cart = () => {
         <Card.Body className="text-end">
           <h4>Total: ${totalPrice.toFixed(2)} USD</h4>
 
-          <Button variant="success" className="mt-3">
+          <Button
+            variant="success"
+            className="mt-3"
+            onClick={() => navigate("/checkout")}
+          >
             Proceed to Checkout
           </Button>
         </Card.Body>

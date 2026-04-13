@@ -14,7 +14,8 @@ import blog10 from "../Blog/images/blog10.jpg";
 
 function Blog() {
   return (
-    <div className="container blog-container" style={{ marginTop: "100px" }}>
+    <section className="BlogSection">
+    <div className="container" style={{ marginTop: "100px" }}>
       {/* الصف الأول: صورة كبيرة يسار وأربع صغيرة يمين */}
       <div className="row justify-content-center">
         <div className="col-md-6 mb-4 gap-3">
@@ -89,6 +90,12 @@ function Blog() {
         </div>
       </div>
     </div>
+    <div className="text-center">
+        <span>-----------------</span>
+          <button className="loadMore fs-3 btn btn-secondary">Load More</button>
+          <span>-----------------</span>
+</div>
+    </section>
   );
 }
 export default Blog;

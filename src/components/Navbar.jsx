@@ -56,18 +56,6 @@ const Navbar = () => {
               Shop
             </Nav.Link>
 
-            <NavDropdown title="Pages" id="pages-dropdown">
-              <NavDropdown.Item as={Link} to="/product-details">
-                Product Details
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/checkout">
-                Checkout
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/blog-details">
-                Blog Details
-              </NavDropdown.Item>
-            </NavDropdown>
-
             <Nav.Link as={Link} to="/blog">
               Blog
             </Nav.Link>
@@ -113,7 +101,7 @@ const Navbar = () => {
               <FaHeart className="me-1" /> Favorite
             </Nav.Link>
 
-            <Nav.Link as={Link} to="/checkout" className="position-relative">
+            <Nav.Link as={Link} to="/Cart" className="position-relative">
               <FaShoppingCart className="me-1" /> Cart
               {totalItems > 0 && (
                 <Badge
