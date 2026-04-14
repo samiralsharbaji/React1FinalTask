@@ -71,7 +71,7 @@
 .product-card > .image-wrapper {
   grid-column: 1;
   grid-row: 1;
-  width: 100%;
+  width: 80%;
   height: auto;
   display: block;
   z-index: 1;

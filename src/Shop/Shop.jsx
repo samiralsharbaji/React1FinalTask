@@ -73,6 +73,7 @@ const products = [
     price: 59.0,
     oldPrice: null,
     status: "sale",
+    Category: "Accessories",
   },
   {
     id: 7,

@@ -1,46 +1,137 @@
-import { useContext } from "react";
-import { CartContext } from "../Context/CartContext";
-import { Button, Row, Col, Form, ListGroup } from "react-bootstrap";
-import { FaTrash } from "react-icons/fa";
-
-import { useParams } from "react-router-dom";
-import { useContext } from "react";
-
+import { useParams, useLocation } from "react-router-dom";
+import { useContext, useState } from "react";
 import { CartContext } from "../Context/CartContext";
 import { products } from "../Shop/Shop";
+import { FaHeart, FaFilter } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const ProductDetails = () => {
   const { id } = useParams();
+  const location = useLocation();
+  const { addToCart } = useContext(CartContext);
+  const navigate = useNavigate();
 
-  const product = products.find(
-    (item) => item.id === Number(id)
+  // 🟢 quantity state
+  const [quantity, setQuantity] = useState(1);
+
+  // 🔥 product
+  const product =
+    location.state || products.find((item) => String(item.id) === String(id));
+
+  if (!product) {
+    return (
+      <h2 className="text-center mt-5 text-danger">❌ No product found</h2>
+    );
+  }
+
+  // 🔥 related products
+  const relatedProducts = products.filter(
+    (p) => p.Category === product.Category && p.id !== product.id,
   );
-
-  if (!product) return <h2>No product found</h2>;
 
   return (
     <div className="container mt-5">
-      <div className="row">
-
+      <div className="row g-4">
+        {/* IMAGE */}
         <div className="col-md-6">
-          <img src={product.image} className="img-fluid" />
+          <img
+            src={product.image}
+            alt={product.name}
+            className="img-fluid rounded shadow"
+          />
         </div>
 
+        {/* DETAILS */}
         <div className="col-md-6">
-          <h2>{product.name}</h2>
-          <h4>${product.price}</h4>
+          <h2 className="fw-bold">{product.name}</h2>
 
-          <p>Rating: {product.rating}</p>
+          <h4 className="text-primary">${product.price}</h4>
 
-          {/* Colors */}
-          <div className="d-flex gap-2 mt-3">
-            <div style={{ width: 20, height: 20, background: "black", borderRadius: "50%" }} />
-            <div style={{ width: 20, height: 20, background: "red", borderRadius: "50%" }} />
-            <div style={{ width: 20, height: 20, background: "blue", borderRadius: "50%" }} />
+          <p className="text-muted">Rating: {product.rating} ⭐</p>
+
+          <p className="text-secondary">
+            Nemo enim ipsam voluptatem quia voluptas.
+          </p>
+
+          {/* 🔢 QUANTITY */}
+          <div className="d-flex align-items-center gap-3 my-3">
+            <button
+              className="btn btn-dark"
+              onClick={() => setQuantity((prev) => (prev > 1 ? prev - 1 : 1))}
+            >
+              -
+            </button>
+
+            <span className="fw-bold fs-5">{quantity}</span>
+
+            <button
+              className="btn btn-dark"
+              onClick={() => setQuantity((prev) => prev + 1)}
+            >
+              +
+            </button>
           </div>
 
-        </div>
+          {/* ❤️ + FILTER + ADD TO CART */}
+          <div className="d-flex align-items-center gap-3 mt-3">
+            {/* Heart */}
+            <FaHeart
+              className="fs-4 text-danger icon-hover"
+              style={{
+                cursor: "pointer",
+                transition: "0.3s",
+              }}
+            />
 
+            {/* Filter */}
+            <FaFilter
+              className="fs-4 text-secondary icon-hover"
+              style={{
+                cursor: "pointer",
+                transition: "0.3s",
+              }}
+            />
+
+            {/* Add to cart */}
+            <button
+              className="btn btn-dark ms-auto"
+              onClick={() => addToCart({ ...product, quantity })}
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* RELATED */}
+      <div className="mt-5">
+        <h3 className="mb-3">Related Products</h3>
+
+        <div className="row">
+          {relatedProducts.length > 0 ? (
+            relatedProducts.map((item) => (
+              <div key={item.id} className="col-md-4">
+                <div
+                  className="card p-2 shadow-sm"
+                  style={{ cursor: "pointer" }}
+                >
+                  <img
+                    src={item.image}
+                    className="img-fluid rounded"
+                    style={{ cursor: "pointer" }}
+                    onClick={() =>
+                      navigate(`/product/${item.id}`, { state: item })
+                    }
+                  />
+                  <h6 className="mt-2">{item.name}</h6>
+                  <p>${item.price}</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>No related products</p>
+          )}
+        </div>
       </div>
     </div>
   );

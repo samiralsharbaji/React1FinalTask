@@ -16,7 +16,7 @@ const Cart = () => {
     return (
       <div className="text-center my-5">
         <h3>Your cart is empty</h3>
-        <Link to="/">
+        <Link to="/shop">
           <Button variant="primary" className="mt-3">
             Go to Shop
           </Button>

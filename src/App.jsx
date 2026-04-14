@@ -14,7 +14,7 @@ import Checkout from "./components/Checkout.jsx";
 import CartItems from "./components/CartItems";
 import Cart from "./components/Cart.jsx";
 import Blog from "./Blog/Blog.jsx";
-import ProductDetails from "./components/ProductList.jsx";
+import ProductDetails from "./components/ProductDetails";
 import Contact from "./Contact/Contact.jsx";
 import Instagram from "./components/Instagram.jsx";
 import Footer from "./components/Footer.jsx";
@@ -37,7 +37,6 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/cartitems" element={<CartItems />} />
                 <Route path="/product/:id" element={<ProductDetails />} />
-                <Route path="/checkout" element={<Checkout />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
             </main>
