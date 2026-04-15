@@ -109,7 +109,7 @@ const products = [
 
 function Shop() {
   return (
-    <div className="shop container" style={{ marginTop: "100px" }}>
+    <div className="shop container">
       <div className="row">
         <div className="col-md-3">
           <div className="shop__sidebar">
@@ -388,10 +388,14 @@ function Shop() {
                 </div>
               </div>
             </div>
-
-            {/* products list  */}
-            <h1>Shop</h1>
-            <ProductList products={products} />
+          </div>
+          {/* products list  */}
+          <h1>Shop</h1>
+          <ProductList products={products} />
+          <div className="PaginationProducts">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
           </div>
         </div>
       </div>

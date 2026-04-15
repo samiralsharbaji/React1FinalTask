@@ -49,10 +49,10 @@ function Home() {
 
   return (
     <div>
-      <div className="hero-container" style={{ marginTop: "90px" }}>
-        <div className="row justify-content-center">
+      <div className="hero-container">
+        <div className="row">
           <div className="col-md-6">
-            <img src={Hero} alt="Hero" className="img" />
+            <img src={Hero} alt="Hero" className="img hero-img-big" />
 
             <div className="hero-text-overlay">
               <h2 className="display-4 mt-4 text-dark">Women’s fashion</h2>
@@ -67,10 +67,10 @@ function Home() {
             </div>
           </div>
           <div className="col-lg-6 ">
-            <div>
-              <div className="row justify-content-center">
-                <div className="col-lg-6 g-2">
-                  <img src={Hero2} alt="Hero" className="img" />
+            
+              <div className="row ">
+                <div className="col-lg-6">
+                  <img src={Hero2} alt="Hero" className="img hero-img-small" />
                   <div className="hero-text-overlay">
                     <h2 className="display-4 mt-4 text-dark">
                       Women’s fashion
@@ -85,42 +85,8 @@ function Home() {
                     </a>
                   </div>
                 </div>
-                <div className="col-lg-6 g-2">
-                  <img src={Hero3} alt="Hero" className="img" />
-                  <div className="hero-text-overlay">
-                    <h2 className="display-4 mt-4 text-dark">
-                      Women’s fashion
-                    </h2>
-                    <p className="text-dark lead">
-                      Sitamet, consectetur adipiscing elit, sed do eiusmod
-                      tempor incidid-unt labore edolore magna aliquapendisse
-                      ultrices gravida.
-                    </p>
-                    <a href="#" className="fs-5 shop-now-link">
-                      SHOP NOW
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="row justify-content-center">
-                <div className="col-lg-6 g-2">
-                  <img src={Hero4} alt="Hero" className="img" />
-                  <div className="hero-text-overlay">
-                    <h2 className="display-4 mt-4 text-dark">
-                      Women’s fashion
-                    </h2>
-                    <p className="text-dark lead">
-                      Sitamet, consectetur adipiscing elit, sed do eiusmod
-                      tempor incidid-unt labore edolore magna aliquapendisse
-                      ultrices gravida.
-                    </p>
-                    <a href="#" className="fs-5 shop-now-link">
-                      SHOP NOW
-                    </a>
-                  </div>
-                </div>
-                <div className="col-lg-6 g-2">
-                  <img src={Hero5} alt="Hero" className="img" />
+                <div className="col-lg-6">
+                  <img src={Hero3} alt="Hero" className="img hero-img-small" />
                   <div className="hero-text-overlay">
                     <h2 className="display-4 mt-4 text-dark">
                       Women’s fashion
@@ -136,7 +102,41 @@ function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+              <div className="row ">
+                <div className="col-lg-6">
+                  <img src={Hero4} alt="Hero" className="img hero-img-small" />
+                  <div className="hero-text-overlay">
+                    <h2 className="display-4 mt-4 text-dark">
+                      Women’s fashion
+                    </h2>
+                    <p className="text-dark lead">
+                      Sitamet, consectetur adipiscing elit, sed do eiusmod
+                      tempor incidid-unt labore edolore magna aliquapendisse
+                      ultrices gravida.
+                    </p>
+                    <a href="#" className="fs-5 shop-now-link">
+                      SHOP NOW
+                    </a>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <img src={Hero5} alt="Hero" className="img hero-img-small" />
+                  <div className="hero-text-overlay">
+                    <h2 className="display-4 mt-4 text-dark">
+                      Women’s fashion
+                    </h2>
+                    <p className="text-dark lead">
+                      Sitamet, consectetur adipiscing elit, sed do eiusmod
+                      tempor incidid-unt labore edolore magna aliquapendisse
+                      ultrices gravida.
+                    </p>
+                    <a href="#" className="fs-5 shop-now-link">
+                      SHOP NOW
+                    </a>
+                  </div>
+                </div>
+              </div>
+            
           </div>
         </div>
       </div>

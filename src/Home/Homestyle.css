@@ -16,6 +16,9 @@
   width: 100%;
   height: auto;
 }
+.hero-img-small{
+  height: 220px;
+}
 .shop-now-link {
   font-size: 1.25rem;
   text-underline-offset: 8px;
@@ -217,11 +220,10 @@
 
 .containerGallery {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .gallery-item {
-  position: relative; /* ضروري لتموضع الأيقونة فوق الصورة */
+  position: relative;
   cursor: pointer;
   overflow: hidden;
 }
